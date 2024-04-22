@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Add user
+{% endblock %}
+
+{% block body %}
+    <h2>Add user</h2>
+<form method="post">
+    <label for="field-name" class="form-label">Name:</label>
+    <input
+      id="field-name"
+      class="form-control"
+      type="text"
+      name="name"
+      required="required">
+
+    <label
+      class="form-label"
+      for="username"
+    >Username:</label>
+    <input
+      class="form-control"
+      type="text"
+      name="username"
+      id="username"
+      required="required">
+
+    <label
+      class="form-label"
+      for="email"
+    >Email:</label>
+    <input
+      class="form-control"
+      type="email"
+      name="email"
+      id="email"
+      required="required">
+
+  <br>
+    <input class="btn btn-success my-2" type="submit" value="Add product">
+</form>
+<div>
+    <a href="{{ url_for("users_app.list") }}">
+        Back to users list
+    </a>
+</div>
+
+{% endblock %}

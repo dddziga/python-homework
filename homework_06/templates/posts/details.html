@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+  Post #{{ post.id }}
+{% endblock %}
+
+{% block body %}
+  <h1>Posts details</h1>
+  <div>
+    <h3>
+      {{ post.title }}
+    </h3>
+    Created at {{ post.created_at }}
+  </div>
+  <div>
+    Updated at:
+    {% if post.updated_at %}
+      {{ post.updated_at }}
+    {% else %}
+      {{ post.created_at }}
+    {% endif %}
+  Content: {{ post.content }}
+  </div>
+  <br>
+  <div>
+    <a href="{{ url_for("posts_app.list") }}">
+      Back to posts list
+    </a>
+  </div>
+{% endblock %}
