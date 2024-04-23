@@ -19,6 +19,15 @@ EVEN = "even"
 PRIME = "prime"
 
 
+def is_prime(n):
+    if n != 0.0 and n != 1:
+        d = 2
+        while n % d != 0:
+            d += 1
+        return d == n
+    elif n == 0.0 or n == 1:
+        return False
+
 def filter_numbers(numb, fil):
     """
     функция, которая на вход принимает список из целых чисел,
@@ -38,18 +47,9 @@ def filter_numbers(numb, fil):
     if fil == ODD:
         return [number for number in numb if number % 2 != 0]
 
-    def IsPrime(n):
-        if n != 0.0 and n != 1:
-            d = 2
-            while n % d != 0:
-                d += 1
-            return d == n
-        else:
-            return False
-
     if fil == PRIME:
         tmp = []
         for i in numb:
-            if IsPrime(i):
+            if is_prime(i):
                 tmp.append(i)
         return tmp
