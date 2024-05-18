@@ -1,0 +1,113 @@
+[
+    {
+      "model": "catalog.category",
+      "pk": 1,
+      "fields": {
+        "name": "АВТОМОБИЛЬНЫЕ КЛЮЧИ ЗАЖИГАНИЯ",
+        "parent": null
+      }
+    },
+    {
+      "model": "catalog.brand",
+      "pk": 1,
+      "fields": {
+        "name": "ACURA",
+        "image": "/media/images/brand/053556efd0d6ecc8357ad66c1cdfd87c_1.png"
+      }
+    },
+    {
+      "model": "catalog.brand",
+      "pk": 2,
+      "fields": {
+        "name": "AUDI",
+        "image": "/media/images/brand/83cdb51978f7a5d880aa46c42e3e4374.png"
+      }
+    },
+    {
+      "model": "catalog.brand",
+      "pk": 3,
+      "fields": {
+        "name": "BMW",
+        "image": "/media/images/brand/e7725ee288f285e853cf4441dd63cc04.png"
+      }
+    },
+    {
+      "model": "catalog.key",
+      "pk": 1,
+      "fields": {
+        "name": "Смарт-ключ ACURA MDX/RDX, USA",
+        "brand": 1,
+        "category": 1,
+        "price": "5670",
+        "description": "Новый смарт-ключ для автомобилей ACURA\n\nMDX\nRDX\n\nДля автомобилей американскаго рынка\nЧастота 314,2\nМодуляция FSK\nЧип Hitag 3 / ID 47\nFCC ID: KR5V1X\nIC: 7812D-V1X\nPN: 72147-TZ5-A01/A11\nA2C32523200\nA2C32523300",
+        "stock": 10,
+        "image": "media/images/keys/fee2710d282e39ecadb36b6f3f4e6d7e.jpeg"
+      }
+    },
+    {
+      "model": "catalog.key",
+      "pk": 2,
+      "fields": {
+        "name": "Ключ для ACURA MDX Sport, 2008-2011, TSX 2009-2012, (USA)",
+        "brand": 1,
+        "category": 1,
+        "price": "3990",
+        "description": "Новый смарт-ключ для автомобилей ACURA\n\nMDX\nRDX\n\nДля автомобилей американскаго рынка\nЧастота 314,2\nМодуляция FSK\nЧип Hitag 3 / ID 47\nFCC ID: KR5V1X\nIC: 7812D-V1X\nPN: 72147-TZ5-A01/A11\nA2C32523200\nA2C32523300",
+        "stock": 0,
+        "image": "media/images/keys/9c085a39fc2ea4d0b0c72131f1b7fd69.jpeg"
+      }
+    },
+    {
+      "model": "catalog.key",
+      "pk": 3,
+      "fields": {
+        "name": "Смарт-ключ для A4,A5,A6,A7,A8,Q5 2008-, 433 Мгц., Keyless Go",
+        "brand": 2,
+        "category": 1,
+        "price": "7480",
+        "description": "Новый смарт-ключ для автомобилей ACURA\n\nMDX\nRDX\n\nДля автомобилей американскаго рынка\nЧастота 314,2\nМодуляция FSK\nЧип Hitag 3 / ID 47\nFCC ID: KR5V1X\nIC: 7812D-V1X\nPN: 72147-TZ5-A01/A11\nA2C32523200\nA2C32523300",
+        "stock": 5,
+        "image": "media/images/keys/015e622492ea9326438960c00f0bcd67.jpeg"
+      }
+    },
+    {
+      "model": "catalog.key",
+      "pk": 4,
+      "fields": {
+        "name": "Ключ для A4,A5,A6,A7,A8,Q5 2008-, 433 Мгц,",
+        "brand": 2,
+        "category": 1,
+        "price": "1580",
+        "description": "Новый смарт-ключ для автомобилей ACURA\n\nMDX\nRDX\n\nДля автомобилей американскаго рынка\nЧастота 314,2\nМодуляция FSK\nЧип Hitag 3 / ID 47\nFCC ID: KR5V1X\nIC: 7812D-V1X\nPN: 72147-TZ5-A01/A11\nA2C32523200\nA2C32523300",
+        "stock": 50,
+        "image": "media/images/keys/c64d70688d6aebfb46f932e75c3f51c9.jpeg"
+      }
+    },
+    {
+      "model": "catalog.key",
+      "pk": 5,
+      "fields": {
+        "name": "Смарт-ключ для БМВ F-серии. X5, X6, и других, Euro",
+        "brand": 3,
+        "category": 1,
+        "price": "3990",
+        "description": "Новый смарт-ключ для автомобилей ACURA\n\nMDX\nRDX\n\nДля автомобилей американскаго рынка\nЧастота 314,2\nМодуляция FSK\nЧип Hitag 3 / ID 47\nFCC ID: KR5V1X\nIC: 7812D-V1X\nPN: 72147-TZ5-A01/A11\nA2C32523200\nA2C32523300",
+        "stock": 50,
+        "image": "media/images/keys/77f8bf56354cc401f17e348908359747.jpeg"
+      }
+    },
+    {
+      "model": "catalog.key",
+      "pk": 6,
+      "fields": {
+        "name": "Смарт-ключ для БМВ F-серии. 5. Euro",
+        "brand": 3,
+        "category": 1,
+        "price": "3990",
+        "description": "Новый смарт-ключ для автомобилей ACURA\n\nMDX\nRDX\n\nДля автомобилей американскаго рынка\nЧастота 314,2\nМодуляция FSK\nЧип Hitag 3 / ID 47\nFCC ID: KR5V1X\nIC: 7812D-V1X\nPN: 72147-TZ5-A01/A11\nA2C32523200\nA2C32523300",
+        "stock": 50,
+        "image": "media/images/keys/1f647d22cbe3bb2316d1364f7c2cbff4.jpeg"
+      }
+    }
+  ]
+  

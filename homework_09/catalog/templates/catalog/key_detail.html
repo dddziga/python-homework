@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ key.name }}</title>
+</head>
+<body>
+    <button onclick="window.location.href='{% url 'key_list' key.category.id key.brand.id %}'">Back to Keys</button>
+    <h1>{{ key.name }}</h1>
+    <p>Brand: {{ key.brand.name }}</p>
+    <p>Category: {{ key.category.name }}</p>
+    <p>Price: {{ key.price }}</p>
+    <p>Description: {{ key.description }}</p>
+    <p>Stock: {{ key.stock }}</p>
+    <img src="{{ key.image.url }}" alt="{{ key.name }}">
+</body>
+</html>

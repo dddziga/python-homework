@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brands in {{ category.name }}</title>
+</head>
+<body>
+    <h1>Brands in {{ category.name }}</h1>
+    <ul>
+        {% for brand in brands %}
+            <li>
+                <a href="{% url 'key_list' category.id brand.id %}">{{ brand.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <button onclick="window.location.href='{% url 'category_list' %}'">Back to Categories</button>
+</body>
+</html>
