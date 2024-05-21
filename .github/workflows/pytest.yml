@@ -26,7 +26,13 @@ jobs:
     - name: Test with pytest
       run: |
         pytest -s --cov --cov-report html --cov-fail-under 73
-    - name: Upload coverage reports to Codecov
-      uses: codecov/codecov-action@v4.0.1
+      env:
+        SQLALCHEMY_PG_CONN_URI: postgresql+asyncpg://postgres:secretpassword@localhost:5432/postgres
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v4
       with:
-        token: ${{ secrets.CODECOV_TOKEN }}
+        flags: smart-tests
+        verbose: true
+      env:
+        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+    
