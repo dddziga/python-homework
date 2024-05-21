@@ -48,4 +48,5 @@ jobs:
         verbose: true
       env:
         CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-    
+        def _get_connection(self, request, *args, proxies=None, **kwargs):
+            return self.get_connection(request.url, proxies)
