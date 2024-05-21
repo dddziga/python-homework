@@ -20,9 +20,22 @@ jobs:
         pip install pytest
         pip install pytest-cov
         pip install -r requirements.txt
-        pip install flake8
         pip install docker
         pip install faker
+    - name: Install inner (homework-level) dependencies
+      run: |
+        for d in homework_* ; do
+          if d=homework_3 || d=homework_4;
+          then 
+            continue
+          fi
+          HW_REQUIREMENTS_PATH="$d/requirements.txt"
+            if [ -f "$HW_REQUIREMENTS_PATH" ];
+            then
+              echo file \'"$HW_REQUIREMENTS_PATH"\' exists, installing...
+              pip install -r "$HW_REQUIREMENTS_PATH";
+            fi
+        done
     - name: Test with pytest
       run: |
         pytest -s --cov --cov-report html --cov-fail-under 73
