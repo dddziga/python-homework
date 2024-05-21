@@ -20,6 +20,9 @@ jobs:
         pip install pytest
         pip install pytest-cov
         pip install -r requirements.txt
+        pip install flake8
+        pip install docker
+        pip install faker
     - name: Test with pytest
       run: |
         pytest -s --cov --cov-report html --cov-fail-under 73
