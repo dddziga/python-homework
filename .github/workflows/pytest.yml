@@ -25,7 +25,7 @@ jobs:
     - name: Install inner (homework-level) dependencies
       run: |
         for d in homework_* ; do
-          if d=homework_3 || d=homework_4;
+          if d=homework_03;
           then 
             continue
           fi
