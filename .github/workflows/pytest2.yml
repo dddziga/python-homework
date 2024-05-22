@@ -20,7 +20,6 @@ jobs:
         pip install pytest
         pip install pytest-cov
         pip install -r requirements.txt
-#        pip install docker
         pip install faker
     - name: Install inner (homework-level) dependencies
       run: |
