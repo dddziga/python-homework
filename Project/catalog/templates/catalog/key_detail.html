@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ key.name }}</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Магазин ключей для авто</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'profile' %}">Личный кабинет</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'category_list' %}">Каталог</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ key.image.url }}" alt="{{ key.name }}" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <h1>{{ key.name }}</h1>
+                <p><strong>Бренд:</strong> {{ key.brand.name }}</p>
+                <p><strong>Категория:</strong> {{ key.category.name }}</p>
+                <p><strong>Цена:</strong> {{ key.price }} руб.</p>
+                <p><strong>Описание:</strong> {{ key.description }}</p>
+                <p><strong>В наличии:</strong> {{ key.stock }}</p>
+                <button class="btn btn-primary" onclick="window.location.href='{% url 'add_to_cart' key.id %}'">Добавить в корзину</button>
+                <button class="btn btn-secondary" onclick="window.location.href='{% url 'key_list' key.category.id key.brand.id %}'">Назад к ключам</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключение Bootstrap JS и зависимостей -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
